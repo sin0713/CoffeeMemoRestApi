@@ -19,4 +19,8 @@ public class RecipeModel {
     public String getCountry() {
         return this.country;
     }
+
+    public void setCountry(String country) {
+        this.country = country;
+    }
 }
