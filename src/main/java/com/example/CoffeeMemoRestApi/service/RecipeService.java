@@ -15,4 +15,14 @@ public class RecipeService {
     public List<RecipeModel> getAllRecipes() {
         return repository.findAll();
     }
+    public RecipeModel getRecipeById(String id) {
+        Integer idInt = Integer.parseInt(id);
+        return repository.findById(idInt).orElseThrow();
+    }
+    public RecipeModel insert(String country) {
+        RecipeModel recipe = new RecipeModel();
+        recipe.setCountry(country);
+        repository.save(recipe);
+        return recipe;
+    }
 }
